@@ -1,8 +1,30 @@
-export default function LearnerDashboard({ user }) {
+import { Outlet } from 'react-router-dom';
+import LearnerSidebar from './LearnerSidebar';
+import ProfileMenu from '../ProfileMenu';
+
+export default function LearnerDashboard({ user, onLogout, onProfile }) {
+  const handleToggleTheme = () => {
+    // Handle theme toggle - could implement dark/light mode
+    console.log('Theme toggle clicked');
+    // You could implement theme switching logic here
+  };
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-cyan-900 via-cyan-700 to-cyan-400 text-white">
-      <h1 className="text-4xl font-bold mb-4">Welcome, {user.name} (Learner)</h1>
-      <p className="text-lg">This is your Learner Dashboard. You can view and enroll in courses, and track your progress.</p>
+    <div className="min-h-screen flex flex-row bg-gradient-to-br from-orange-900 via-orange-700 to-orange-400 text-white">
+      <LearnerSidebar />
+      <div className="flex-1 flex flex-col">
+        <div className="flex justify-end items-center p-4">
+          <ProfileMenu 
+            user={user} 
+            onLogout={onLogout}
+            onProfile={onProfile}
+            onToggleTheme={handleToggleTheme}
+          />
+        </div>
+        <main className="flex-1 flex flex-col items-center justify-center">
+          <Outlet context={{ user }} />
+        </main>
+      </div>
     </div>
   );
 } 
