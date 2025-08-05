@@ -3,14 +3,8 @@ import AdminSidebar from './AdminSidebar';
 import ProfileMenu from '../ProfileMenu';
 
 export default function AdminDashboard({ user, onLogout, onProfile }) {
-  const handleToggleTheme = () => {
-    // Handle theme toggle - could implement dark/light mode
-    console.log('Theme toggle clicked');
-    // You could implement theme switching logic here
-  };
-
   return (
-    <div className="min-h-screen flex flex-row bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400 text-white">
+    <div className="min-h-screen flex flex-row bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white">
       <AdminSidebar />
       <div className="flex-1 flex flex-col">
         <div className="flex justify-end items-center p-4">
@@ -18,7 +12,6 @@ export default function AdminDashboard({ user, onLogout, onProfile }) {
             user={user} 
             onLogout={onLogout}
             onProfile={onProfile}
-            onToggleTheme={handleToggleTheme}
           />
         </div>
         <main className="flex-1 flex flex-col items-center justify-center">

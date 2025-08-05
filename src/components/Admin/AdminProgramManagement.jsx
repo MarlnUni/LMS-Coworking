@@ -1,4 +1,4 @@
-export default function ProgramManagement() {
+export default function AdminProgramManagement() {
   return (
     <div className="flex-1 flex flex-col items-center justify-center h-full p-6">
       <h2 className="text-2xl font-bold mb-2">Program Management</h2>

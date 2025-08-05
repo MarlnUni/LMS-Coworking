@@ -1,4 +1,4 @@
-export default function EnrollUsers() {
+export default function AdminEnrollUsers() {
   return (
     <div className="flex-1 flex flex-col items-center justify-center h-full p-6">
       <h2 className="text-2xl font-bold mb-2">Enroll Users</h2>
