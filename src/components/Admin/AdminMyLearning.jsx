@@ -783,9 +783,9 @@ export default function AdminMyLearning({ user }) {
           <div className="space-y-8">
             {/* Discussion Forums */}
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-              <div className="bg-gradient-to-r from-orange-600 to-orange-700 p-6 text-white">
+              <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 text-white">
                 <h2 className="text-2xl font-bold mb-2">Executive Forums</h2>
-                <p className="text-orange-100">Connect with other leaders and industry experts</p>
+                <p className="text-purple-100">Connect with other leaders and industry experts</p>
               </div>
               <div className="p-6">
                 <div className="space-y-4">
@@ -796,7 +796,7 @@ export default function AdminMyLearning({ user }) {
                         <span className="text-sm text-gray-500">12 active discussions</span>
                       </div>
                       <p className="text-sm text-gray-600 mb-3">Discuss strategic challenges and share leadership insights</p>
-                      <button className="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors text-sm">
+                      <button className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors text-sm">
                         Join Discussion
                       </button>
                     </div>
